@@ -16,9 +16,9 @@ problems by learning a nonlinear regularizer, in the form of a deep
 neural network. Specifically, the Neumann Network is designed to minimize
 the following expression:
 
-{% raw %}
-$$ || X \beta - y||_2^2 + R(\beta)$$
-{$ endraw %}
+
+  $$argmin_\beta || X \beta - y||_2^2 + R(\beta)$$
+
 
 ---
 
