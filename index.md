@@ -21,11 +21,11 @@ the following expression:
 
 The Neumann series estimator that solves this problem (for quadratic or linear r()) is:  
 
-![Neumann Estimator](https://github.com/dgilton/neumann_networks/figures/neumann_estimator.pdf)  
+![Neumann Estimator](https://github.com/dgilton/neumann_networks/images/neumann_estimator.pdf)  
 
 A visualization of the resulting computational graph is here:  
 
-![Neumann Network](https://github.com/dgilton/neumann_networks/figures/netfig_nn.pdf)  
+![Neumann Network](https://github.com/dgilton/neumann_networks/images/netfig_nn.pdf)  
 
 By replacing R() with a deep neural network, we can leverage training data to train the entire network 
 end-to-end, similar to existing *unrolled iterative* methods. The resulting Neumann network is not 
@@ -41,7 +41,7 @@ by testing on the dataset gathered by Aggarwal et. al (2018) [https://arxiv.org/
 
 ## MRI Reconstruction
 
-![MRI Results](https://github.com/dgilton/neumann_networks/figures/mri_results.png)
+![MRI Results](https://github.com/dgilton/neumann_networks/images/mri_results.png)
 
 
 ### Preconditioning
@@ -51,7 +51,7 @@ the altered architecture, where T() is the preconditioner. On certain
 types of ill-conditioned forward operators, this preconditioning step can 
 considerably improve performance. 
 
-![Preconditioned Network](https://github.com/dgilton/neumann_networks/figures/netfig_pnn.pdf)  
+![Preconditioned Network](https://github.com/dgilton/neumann_networks/images/netfig_pnn.pdf)  
 
 The main differences between the preconditioned version and vanilla Neumann Network is in the 
 data-consistency term, which has been replaced by a preconditioning operator, and the initialization,
