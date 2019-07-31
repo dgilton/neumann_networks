@@ -19,7 +19,7 @@ the following expression:
 
 <img src="images/optimization_problem.png" width="200">
 
-The Neumann series estimator that solves this problem (for quadratic or linear r()) is:  
+The Neumann series estimator that solves this problem (for quadratic regularizer r() ) is:  
 
 <img src="images/neumann_estimator.png" width="300">
 
@@ -29,9 +29,12 @@ A visualization of the resulting computational graph is here:
 
 By replacing R() with a deep neural network, we can leverage training data to train the entire network 
 end-to-end, similar to existing *unrolled iterative* methods. The resulting Neumann network is not 
-motivated by an existing optimization algorithm, permitting novel analysis and empirical benefits.
+motivated by an existing optimization algorithm, permitting novel analysis and empirical benefits.  
 
-
+Note that the Neumann series identity used to create the above estimator is not valid in general for 
+nonlinear regularizers. However, we demonstrate for data drawn from a union of subspaces and piecewise linear 
+regularizer (satisfied by a neural network with ReLU activations) there is an optimal reconstruction 
+that has identical form to the Neumann series above.  
 
 ### Results
 
@@ -44,16 +47,19 @@ by testing on the dataset gathered by Aggarwal et. al (2018); access their arxiv
 
 ![MRI Results](images/mri_results.png)  
 
+Top row: Original image and reconstructions given by several methods.
+Bottom row: Image mask and 
+
 ## CelebA Deblurring
 
-![CelebA Deblur](images/celeba_deblur.png)  
+<img src="images/celeba_deblur.png" width="500">  
 
 From left to right, top row: Original image, Neumann Network reconstruction, Gradient Descent Network reconstruction, and single residual network reconstruction.  
 Bottom row: Input to the networks, followed by residual images multiplied by 6x for improved visualization.
 
 ## STL10 Compressed Sensing
 
-![STL10 CS8](images/stl10_cs.png)  
+<img src="images/stl10_cs.png" width="500">  
 
 From left to right, top row: Original image, Neumann Network reconstruction, Gradient Descent Network reconstruction, and si$
 Bottom row: Input to the networks, followed by residual images multiplied by 6x for improved visualization.
@@ -68,19 +74,17 @@ considerably improve performance.
 ![Preconditioned Network](images/netfig_pnn.png)  
 
 The main differences between the preconditioned version and vanilla Neumann Network is in the 
-data-consistency term, which has been replaced by a preconditioning operator, and the initialization,
-which is replaced by a preconditioned initial estimate.
+data-consistency term of each block, which has been replaced by a preconditioning operator, 
+and the initialization, which has been replaced by a preconditioned initial estimate.
 
 
 
 ## Dependencies
 This code has been tested on the following:
 
-Tensorflow: 1.13.1
-
-Python: 3.7.3 (But most modern 3.6 should be fine too)
-
-Cuda: 9.0
+Tensorflow: 1.13.1  
+Python: 3.7.3 (But most modern 3.6 should be fine too)  
+Cuda: 9.0  
 
 If you experience issues, please contact the corresponding author via email or submit an issue.
 Be especially careful that your Tensorflow version is the same as listed.
@@ -94,7 +98,7 @@ If you have questions, requests, ideas, or are interested in a resource that is 
 here or on the Github (like a pretrained checkpoint for a problem or method) please contact
 Davis Gilton via email. His email is his last name at wisc.edu .
 
-TBD: Downloadable checkpoints. Comparison method github.
+To Do: Downloadable checkpoints. Repository for comparison methods in Tensorflow.
 
 
 ---
