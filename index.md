@@ -7,9 +7,9 @@ description: User Guide and Documentation for Neumann Networks
 
 ### Important Links:
 
-**Arxiv**: https://arxiv.org/abs/1901.03707  
+**Arxiv**: [https://arxiv.org/abs/1901.03707](https://arxiv.org/abs/1901.03707)  
 
-**Github**: https://github.com/dgilton/neumann_networks_code
+**Github**: [https://github.com/dgilton/neumann_networks_code](https://github.com/dgilton/neumann_networks_code)
 
 ### Neumann Networks
 The Neumann Network is a method of solving ill-posed linear inverse
@@ -17,11 +17,11 @@ problems by learning a nonlinear regularizer, in the form of a deep
 neural network. Specifically, the Neumann Network is designed to minimize
 the following expression:
 
-<img src="images/optimization_problem.png" width="300">
+<img src="images/optimization_problem.png" width="200">
 
 The Neumann series estimator that solves this problem (for quadratic or linear r()) is:  
 
-![Neumann Estimator](images/neumann_estimator.png){:height="30%"}  
+<img src="images/neumann_estimator.png" width="300">
 
 A visualization of the resulting computational graph is here:  
 
@@ -42,8 +42,21 @@ by testing on the dataset gathered by Aggarwal et. al (2018); access their arxiv
 
 ## MRI Reconstruction
 
-![MRI Results](images/mri_results.png)
+![MRI Results](images/mri_results.png)  
 
+## CelebA Deblurring
+
+![CelebA Deblur](images/celeba_deblur.png)  
+
+From left to right, top row: Original image, Neumann Network reconstruction, Gradient Descent Network reconstruction, and single residual network reconstruction.  
+Bottom row: Input to the networks, followed by residual images multiplied by 6x for improved visualization.
+
+## STL10 Compressed Sensing
+
+![STL10 CS8](images/stl10_cs.png)  
+
+From left to right, top row: Original image, Neumann Network reconstruction, Gradient Descent Network reconstruction, and si$
+Bottom row: Input to the networks, followed by residual images multiplied by 6x for improved visualization.
 
 ### Preconditioning
 It is straightforward to incorporate arbitrary preconditioning operators
@@ -72,6 +85,16 @@ Cuda: 9.0
 If you experience issues, please contact the corresponding author via email or submit an issue.
 Be especially careful that your Tensorflow version is the same as listed.
 I highly recommend installing Tensorflow via conda in a virtualenv.
+
+### Using the code
+Documentation for the code and instructions for training and testing are on the 
+[Github repo](https://github.com/dgilton/neumann_networks_code).  
+
+If you have questions, requests, ideas, or are interested in a resource that is not provided 
+here or on the Github (like a pretrained checkpoint for a problem or method) please contact
+Davis Gilton via email. His email is his last name at wisc.edu .
+
+TBD: Downloadable checkpoints. Comparison method github.
 
 
 ---
