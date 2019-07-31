@@ -17,15 +17,15 @@ problems by learning a nonlinear regularizer, in the form of a deep
 neural network. Specifically, the Neumann Network is designed to minimize
 the following expression:
 
-![Core Optimization Problem](images/optimization_problem.pdf)  
+![Core Optimization Problem](images/optimization_problem.png)  
 
 The Neumann series estimator that solves this problem (for quadratic or linear r()) is:  
 
-![Neumann Estimator](images/neumann_estimator.pdf)  
+![Neumann Estimator](images/neumann_estimator.png)  
 
 A visualization of the resulting computational graph is here:  
 
-![Neumann Network](images/netfig_nn.pdf)  
+![Neumann Network](images/netfig_nn.png)  
 
 By replacing R() with a deep neural network, we can leverage training data to train the entire network 
 end-to-end, similar to existing *unrolled iterative* methods. The resulting Neumann network is not 
@@ -51,7 +51,7 @@ the altered architecture, where T() is the preconditioner. On certain
 types of ill-conditioned forward operators, this preconditioning step can 
 considerably improve performance. 
 
-![Preconditioned Network](images/netfig_pnn.pdf)  
+![Preconditioned Network](images/netfig_pnn.png)  
 
 The main differences between the preconditioned version and vanilla Neumann Network is in the 
 data-consistency term, which has been replaced by a preconditioning operator, and the initialization,
