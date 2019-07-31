@@ -17,7 +17,7 @@ problems by learning a nonlinear regularizer, in the form of a deep
 neural network. Specifically, the Neumann Network is designed to minimize
 the following expression:
 
-![Core Optimization Problem](images/optimization_problem.png){:height="20%"}  
+<img src="images/optimization_problem.png" width="300">
 
 The Neumann series estimator that solves this problem (for quadratic or linear r()) is:  
 
