@@ -17,11 +17,11 @@ problems by learning a nonlinear regularizer, in the form of a deep
 neural network. Specifically, the Neumann Network is designed to minimize
 the following expression:
 
-![Core Optimization Problem](images/optimization_problem.png)  
+![Core Optimization Problem](images/optimization_problem.png){:height="20%"}  
 
 The Neumann series estimator that solves this problem (for quadratic or linear r()) is:  
 
-![Neumann Estimator](images/neumann_estimator.png)  
+![Neumann Estimator](images/neumann_estimator.png){:height="30%"}  
 
 A visualization of the resulting computational graph is here:  
 
@@ -37,7 +37,8 @@ motivated by an existing optimization algorithm, permitting novel analysis and e
 
 We have run experiments for reconstruction tasks on subsets of the Cifar10, CelebA, and STL10 datasets. In 
 addition, we demonstrate the potential of the Neumann network for undersampled MRI reconstruction 
-by testing on the dataset gathered by Aggarwal et. al (2018) [https://arxiv.org/abs/1712.02862].  
+by testing on the dataset gathered by Aggarwal et. al (2018); access their arxiv paper 
+[here](https://arxiv.org/abs/1712.02862).  
 
 ## MRI Reconstruction
 
