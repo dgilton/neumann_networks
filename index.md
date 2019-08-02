@@ -64,14 +64,16 @@ Bottom row: Image mask and
 
 <img src="images/celeba_deblur.png" width="500">  
 
-From left to right, top row: Original image, Neumann Network reconstruction, Gradient Descent Network reconstruction, and single residual network reconstruction.  
+From left to right, top row: Original image, Neumann Network reconstruction, 
+Gradient Descent Network reconstruction, and single residual network reconstruction.  
 Bottom row: Input to the networks, followed by residual images multiplied by 6x for improved visualization.
 
 #### STL10 Compressed Sensing
 
 <img src="images/stl10_cs.png" width="500">  
 
-From left to right, top row: Original image, Neumann Network reconstruction, Gradient Descent Network reconstruction, and si$
+From left to right, top row: Original image, Neumann Network reconstruction,
+Gradient Descent Network reconstruction, and single residual network reconstruction.
 Bottom row: Input to the networks, followed by residual images multiplied by 6x for improved visualization.
 
 ### Preconditioning
